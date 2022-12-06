@@ -7022,10 +7022,11 @@
 }
 
 .calwrap {
-    padding: 20px 0;
-    width: 280px;
     margin: auto;
     max-width: 90%;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/calendar.jpg') no-repeat;
+    background-size: 100%;
+    background-position-y: 30%;
 }
 
 .calander {
