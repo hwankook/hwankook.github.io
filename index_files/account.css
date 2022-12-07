@@ -108,8 +108,7 @@
     width: 90%;
     margin: auto;
     border-radius: 6px;
-    box-shadow: 1px 2px 3px 0 #ccc;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 .accst02 .pack {
@@ -118,12 +117,10 @@
     height: 42px;
     line-height: 42px;
     text-align: center;
-    background: #f1f3f8;
     box-sizing: border-box;
     padding: 0 20px;
     position: relative;
     color: #444;
-    border-radius: 6px 6px 6px 6px
 }
 
 body.ft-myeongjo .accst02 .pack {
@@ -149,10 +146,13 @@ body.ft-notosans .accst02 .pack {
     transition: all .3s ease
 }
 
+.accst02 .pack_wrap {
+    border: solid;
+}
+
 .accst02 .pack_wrap .c {
     background: #fff;
     border-radius: 0 0 6px 6px;
-    font-family: noto sans kr, sans-serif;
     height: 0;
     overflow: hidden;
     -moz-transition: height .5s ease;
@@ -171,10 +171,6 @@ body.ft-notosans .accst02 .pack {
 
 .accst02 .pack_wrap.active .c.cnt1 {
     height: 73px;
-}
-
-.accst02 .pack_wrap.active .c.accordion2.cnt2 {
-    height: 147px;
 }
 
 .accst02 .pack_wrap.active .c.cnt3 {
@@ -221,11 +217,9 @@ body.ft-notosans .accst02 .pack {
     top: 39px;
     width: 60px;
     text-align: center;
-    font-family: noto sans kr, sans-serif;
     height: 24px;
     line-height: 24px;
     font-weight: 700;
-    background-image: url(/src/img/payment_icon_yellow_small.png);
     background-position: center;
     background-size: 80% auto;
     background-repeat: no-repeat;
