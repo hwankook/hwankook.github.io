@@ -1,0 +1,234 @@
+.txtnone {
+    text-indent: -9999px;
+    left: -9999px;
+    position: absolute;
+}
+
+.clearfix:after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+    clear: both;
+    content: ''
+}
+
+.displayNone {
+    display: none !important
+}
+
+.inner {
+    width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box
+}
+
+.inner:after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+    clear: both;
+    content: ''
+}
+
+.inner2 {
+    width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box
+}
+
+.inner2:after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+    clear: both;
+    content: ''
+}
+
+.m-open-inline-block {
+    display: none !important
+}
+
+.m-open-block {
+    display: none !important
+}
+
+.m-open-table-row {
+    display: none !important
+}
+
+.ovhd {
+    overflow: hidden
+}
+
+.vcenterbox {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: auto
+}
+
+.float50 {
+    float: left;
+    width: 50%;
+    box-sizing: border-box
+}
+
+.float50.r {
+    float: right
+}
+
+.floatAuto {
+    float: left
+}
+
+.floatAuto.r {
+    float: right
+}
+
+.hd {
+    opacity: 0
+}
+
+.visible {
+    opacity: 1
+}
+
+.accst02 {
+    margin-bottom: 50px;
+}
+
+.accst02 .pack_wrap {
+    width: 90%;
+    margin: auto;
+    border-radius: 6px;
+    box-shadow: 1px 2px 3px 0 #ccc;
+    margin-bottom: 20px
+}
+
+.accst02 .pack {
+    display: block;
+    font-size: 17px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    background: #f1f3f8;
+    box-sizing: border-box;
+    padding: 0 20px;
+    position: relative;
+    color: #444;
+    border-radius: 6px 6px 6px 6px
+}
+
+body.ft-myeongjo .accst02 .pack {
+    font-size: 14px;
+    font-weight: 700
+}
+
+body.ft-notosans .accst02 .pack {
+    font-size: 14px;
+    font-weight: 700
+}
+
+.accst02 .pack>i {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 15px;
+    font-size: 14px;
+    line-height: 18px;
+    height: 18px;
+    color: #666;
+    transition: all .3s ease
+}
+
+.accst02 .pack_wrap .c {
+    background: #fff;
+    border-radius: 0 0 6px 6px;
+    font-family: noto sans kr, sans-serif;
+    height: 0;
+    overflow: hidden;
+    -moz-transition: height .5s ease;
+    -webkit-transition: height .5s ease;
+    -o-transition: height .5s ease;
+    transition: height .5s ease
+}
+
+.accst02 .pack_wrap.active .pack i {
+    transform: rotate(180deg)
+}
+
+.accst02 .pack_wrap.active .c {
+    height: fit-content
+}
+
+.accst02 .pack_wrap.active .c.cnt1 {
+    height: 73px;
+}
+
+.accst02 .pack_wrap.active .c.accordion2.cnt2 {
+    height: 147px;
+}
+
+.accst02 .pack_wrap.active .c.cnt3 {
+    height: 221px
+}
+
+.accst02 .pack_wrap .c>li {
+    position: relative;
+    padding: 10px 12px;
+    color: #333;
+    line-height: 24px;
+    border-top: 1px solid #eee;
+    text-align: left;
+}
+
+.accst02 .pack_wrap .c>li:nth-child(1) {
+    border-top: 0
+}
+
+.accst02 .pack_wrap .c>li .name {
+    display: inline-block;
+    margin-top: 5px
+}
+
+.accst02 .pack_wrap .c>li .b_1 {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    width: 60px;
+    background: #f1f3f8;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-align: center;
+    height: 24px;
+    line-height: 24px;
+    font-weight: 700;
+    border-radius: 3px;
+    cursor: pointer
+}
+
+.accst02 .pack_wrap .c>li .b_2 {
+    position: absolute;
+    right: 12px;
+    top: 39px;
+    width: 60px;
+    text-align: center;
+    font-family: noto sans kr, sans-serif;
+    height: 24px;
+    line-height: 24px;
+    font-weight: 700;
+    background-image: url(/src/img/payment_icon_yellow_small.png);
+    background-position: center;
+    background-size: 80% auto;
+    background-repeat: no-repeat;
+    background-color: #ffeb00;
+    border-radius: 3px
+}
