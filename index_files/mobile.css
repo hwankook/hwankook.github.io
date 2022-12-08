@@ -1,12 +1,5 @@
 @media (max-width: 767px) {
 
-    /* 모바일 헤더 */
-    body .body:not(.no-header),
-    body.headerSectionMerge .body:not(.no-header),
-    body.headerSectionMerge .body:not(.no-header)>.frm:first-child {
-        margin-top: 50px !important;
-    }
-
     body #main_container.join .body,
     body #main_container.mypage .body,
     body #main_container.policy_service .body,
