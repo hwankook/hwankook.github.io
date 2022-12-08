@@ -3511,7 +3511,6 @@
                                                         style="font-family:'Noto Sans KR';"><span
                                                             style="font-size:16px;"><span style="line-height:20px;">따뜻함을
                                                                 나누어 주세요</span></span></span></span></p>
-                                            <p class="text-m" style="text-align: center;"><br></p>
                                         </div>
                                     </div>
                                     <style class="mobile-box">
@@ -3526,13 +3525,92 @@
                                         }
                                     </style>
                                 </div>
+                                <div class="box tbu lineBox mobile_ele displayed" style="height: 50px; display: table;"
+                                    data-m-hei="50px" data-hei="50px" id="bdHj4Y">
+                                    <div class="preview"></div>
+                                    <div class="view tb-c va-m">
+                                        <a href="#" data-target="#LineModal" data-toggle="modal" data-obj="box"
+                                            class="preview-layer"></a>
+                                        <div class="drag_inner" contenteditable="false">
+                                            <p class="line line-align-center"
+                                                style="background: url('../images/line_gray.png') center center repeat-x; height: 15px; width: 65%; margin: 0px auto;">
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <style class="mobile-box">
+                                        @media (max-width: 767px) {
+                                            #bdHj4Y {
+                                                height: 50px !important;
+                                            }
+                                        }
+
+                                        .mobile_editor_mode #bdHj4Y {
+                                            height: 50px !important;
+                                        }
+                                    </style>
+                                </div>
+                                <div class="box tbu txtBox mobile_ele t-to-b an-dr10 an-dl0 qv-in-viewport displayed qv-ani-ele"
+                                    id="btLpYd"
+                                    style="display: table; margin: 0px; padding: 0px; background-image: none; background-color: rgba(0, 0, 0, 0); text-align: center; border: none; border-radius: 0px; height: auto;"
+                                    data-hei="auto" data-m-hei="">
+                                    <div class="preview"></div>
+                                    <div class="view tb-c va-m" style="display: table-cell;">
+                                        <div class="drag_inner qv-text" contenteditable="false">
+                                            <p class="text-m" style="text-align: center;"><span
+                                                    style="font-size:18px;"><span
+                                                        style="letter-spacing:2px;margin-right:-2px;"><span
+                                                            style="font-family:'Noto Sans KR';">이철순 · 노경란<span
+                                                                style="color:#696969;"> 의 장남
+                                                            </span><strong>환국</strong></span></span></span></p>
+                                            <p class="text-m" style="text-align: center;"><span
+                                                    style="font-size:18px;"><span
+                                                        style="letter-spacing:2px;margin-right:-2px;"><span
+                                                            style="font-family:'Noto Sans KR';">신경용 · 신인석<span
+                                                                style="color:#696969;"> 의 차녀
+                                                            </span><strong>은경</strong></span></span></span></p>
+                                        </div>
+                                    </div>
+                                    <style class="mobile-box">
+                                        @media (max-width: 767px) {
+                                            #btLpYd {
+                                                height: auto !important;
+                                            }
+                                        }
+
+                                        .mobile_editor_mode #btLpYd {
+                                            height: auto !important;
+                                        }
+                                    </style>
+                                </div>
+                                <div class="box tbu lineBox mobile_ele displayed" style="height: 50px; display: table;"
+                                    data-m-hei="50px" data-hei="50px" id="bcnaEl">
+                                    <div class="preview"></div>
+                                    <div class="view tb-c va-m">
+                                        <a href="#" data-target="#LineModal" data-toggle="modal" data-obj="box"
+                                            class="preview-layer"></a>
+                                        <div class="drag_inner" contenteditable="false">
+                                            <p class="line line-align-center"
+                                                style="background: url('../images/line_gray.png') center center repeat-x; height: 15px; width: 65%; margin: 0px auto;">
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <style class="mobile-box">
+                                        @media (max-width: 767px) {
+                                            #bcnaEl {
+                                                height: 50px !important;
+                                            }
+                                        }
+
+                                        .mobile_editor_mode #bcnaEl {
+                                            height: 50px !important;
+                                        }
+                                    </style>
+                                </div>
                                 <div class="box tbu txtBox mobile_ele t-to-b qv-ani-ele an-dr10 an-dl0 qv-in-viewport displayed"
                                     id="btJgMo"
                                     style="display: table; height: auto; margin: 0px; padding: 0px; background: none rgba(0, 0, 0, 0); text-align: center; border: none; border-radius: 0px;"
                                     data-hei="auto" data-m-hei="">
                                     <div class="preview"></div>
-
-
                                     <div class="view tb-c va-m" style="display: table-cell;">
                                         <div class="drag_inner qv-text" contenteditable="false">
                                             <p class="text-m" style="text-align: center;"><span
@@ -6679,7 +6757,6 @@
 
             initDownloadButton();
 
-            initInstagramFeed();
             initDatabaseContents();
 
             initGrid();
@@ -8542,31 +8619,6 @@
                 }
             });
         }
-        function initInstagramFeed() {
-            var instagram_feed = $('#main_container div.instagramFeedBox');
-            $.each(instagram_feed, function (i, val) {
-                var target = $(this);
-                var feed_token = target.data('access-token');
-                var feed_count = target.data('feed-count');
-                var feed_count_m = target.data('feed-count-m');
-                var feed_column = target.data('feed-column');
-                var feed_column_m = target.data('feed-column-m');
-                var feed_height = target.data('feed-height');
-                var feed_height_m = target.data('feed-height-m') == undefined ? $(val).find('.sns-feed-image-layer').height() : target.data('feed-height-m');
-                var feed_margin = target.data('feed-margin');
-                var vBox = $(val).children('.view').first();
-
-                renderInstagramGraphFeed(feed_token, feed_count, feed_column, feed_count_m, feed_column_m, feed_height, feed_height_m, feed_margin, vBox)
-                target.removeAttr('data-access-token');
-            });
-        }
-        //(function(d, s, id) {
-        //    var js, fjs = d.getElementsByTagName(s)[0];
-        //    if (d.getElementById(id)) return;
-        //    js = d.createElement(s); js.id = id;
-        //    js.src = 'https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.1&appId=786526475012875&autoLogAppEvents=1';
-        //    fjs.parentNode.insertBefore(js, fjs);
-        //}(document, 'script', 'facebook-jssdk'));
 
         function initFacebookSDK(d, s, id, c) {
             var js, fjs = d.getElementsByTagName(s)[0];
@@ -8608,168 +8660,6 @@
                     callback();
                 }
             )
-        }
-
-        function renderInstagramGraphFeed(feed_token, feed_count, feed_column, feed_count_m, feed_column_m, feed_height, feed_height_m, feed_margin, vBox) {
-            if (!feed_token) return;
-            refreshInstagramAccessToken(feed_token, function () {
-                $.ajax({
-                    type: "GET",
-                    url: "https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,timestamp,permalink&access_token=" + feed_token,
-                    success: function (response) {
-                        if (!response.data) return
-                        else if (response.data.length > 0) {
-                            $(vBox.children('div')[0]).empty();
-                            var count = isMobile() ? feed_count_m : feed_count;
-                            for (var i = 0; i < count; i++) {
-                                var media = response.data[i];
-                                if (!media) return;
-
-                                var thumbnail = media.media_type == "VIDEO" ? media.thumbnail_url : media.media_url;
-                                var feed = '<div class="sns-feed-box grid-' + feed_column + ' grid-m-' + feed_column_m + '">';
-                                feed += "<a target='_blank' href='" + media.permalink + "'>";
-                                feed += "<div class='sns-feed-image-layer m-h-" + feed_height_m + "' style='height:" + feed_height + "px; margin:" + feed_margin + "px;'>";
-                                feed += '<div class="sns-feed-image" style="background-image: url(' + thumbnail + ');"></div>';
-                                feed += "<div class='sns-feed-caption-layer qv-font'>";
-                                if (media.caption !== undefined) {
-                                    if (media.caption.length > 0) {
-                                        var text = media.caption;
-                                        var length = 100;
-                                        var trimmedString = text.length > length ? text.substring(0, length - 3) + "..." : text;
-                                        feed += "<p class='sns-feed-caption-contents'>" + trimmedString + "</p>"
-                                    }
-                                }
-                                feed += "<span class='sns-feed-caption-info'>";
-                                feed += "	<div class='sns-feed-caption-time'>";
-                                feed += "		<i class='fa fa-calendar-o'></i>";
-                                feed += getNiceTime(new Date(media.timestamp).getTime(), new Date(), 1, true);
-                                feed += "	</div>";
-                                feed += "</span>";
-                                feed += "</div>";
-                                feed += "</div>";
-                                feed += "</a>";
-                                feed += "</div>";
-                                $(vBox.children('div')[0]).append(feed);
-                                $(vBox).find('.sns-feed').show()
-                            }
-                        }
-                    },
-                    error: function (xhr) {
-                        console.log('[Instagram]\n잘못된 계정이거나 존재하지 않는 계정입니다.\n\n계정정보나 비밀번호가 변경되었다면 다시 한 번 연동해주시기 바랍니다.');
-                        console.log('[Instagram ERROR]', JSON.parse(xhr.responseText).error);
-                        $(vBox).find('.sns-feed').show();
-                    }
-                });
-            });
-        }
-
-        function renderInstagramFeed(feed_token, feed_count, feed_column, feed_column_m, feed_height_m, feed_style, vBox) {
-            $.ajax({
-                type: "GET",
-                dataType: "jsonp",
-                cache: false,
-                url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=" + feed_token + "&count=" + feed_count,
-                success: function (response) {
-                    if (!response.data) return;
-                    else if (response.data.length > 0) {
-                        $(vBox.children('div')[0]).empty();
-
-                        for (var i = 0; i < response.data.length; i++) {
-                            var feed = '<div class="sns-feed-box grid-' + feed_column + ' grid-m-' + feed_column_m + '">';
-                            feed += "<a target='_blank' href='" + response.data[i].link + "'>";
-                            feed += "<div class='sns-feed-image-layer m-h-" + feed_height_m + "' style='" + feed_style + "'>";
-                            feed += '<div class="sns-feed-image" style="background-image: url(' + response.data[i].images.standard_resolution.url + ');"></div>'
-                            feed += "</div>";
-                            feed += "<div class='sns-feed-caption-layer qv-font'>";
-                            if (response.data[i].caption !== null) {
-
-                                if (response.data[i].caption.text.length > 0) {
-                                    var text = response.data[i].caption.text;
-                                    var length = 100;
-                                    var trimmedString = text.length > length ? text.substring(0, length - 3) + "..." : text;
-                                    feed += "<p class='sns-feed-caption-contents'>" + trimmedString + "</p>"
-                                }
-                            }
-                            feed += "<span class='sns-feed-caption-info'>";
-                            feed += "<div class='sns-feed-caption-time'>";
-                            feed += "<i class='fa fa-calendar-o'></i>";
-                            feed += getNiceTime(parseInt(response.data[i].created_time) * 1000, new Date(), 1, true);
-                            feed += "</div>";
-                            feed += "<div class='sns-feed-caption-likes'>";
-                            feed += "<i class='fa fa-heart'></i>";
-                            feed += response.data[i].likes.count;
-                            feed += "<i class='fa fa-comment'></i>";
-                            feed += response.data[i].comments.count;
-                            feed += "</div>";
-                            feed += "</span>";
-                            feed += "</div>";
-                            feed += "</a>";
-                            feed += "</div>";
-                            $(vBox.children('div')[0]).append(feed);
-                        }
-                    }
-
-                    if (response.data.length < feed_count && response.pagination) {
-                        if (!response.pagination.next_url) return;
-                        else {
-                            renderInstagramFeedMore(
-                                response.pagination.next_url,
-                                feed_count - response.data.length,
-                                feed_column, feed_column_m, feed_height_m, feed_style, vBox);
-                        }
-                    }
-                }
-            });
-        }
-
-        // 특정 이유로 인스타그램 피드를 원하는 개수만큼 불러오지 못했을 때 추가로 API를 호출한다
-        // 저작권이 있는 BGM이 들어간 영상, 재생시간이 1분 이상인 영상 등
-        // https://smashballoon.com/video-posts-are-missing-or-only-show-thumbnail/
-        function renderInstagramFeedMore(feed_url, feed_count, feed_column, feed_column_m, feed_height_m, feed_style, vBox) {
-            $.ajax({
-                type: "GET",
-                dataType: "jsonp",
-                cache: false,
-                url: feed_url,
-                success: function (response) {
-                    if (!response.data) return
-                    else if (response.data.length > 0) {
-                        for (var i = 0; i < feed_count; i++) {
-                            var feed = '<div class="sns-feed-box grid-' + feed_column + ' grid-m-' + feed_column_m + '">';
-                            feed += "<a target='_blank' href='" + response.data[i].link + "'>";
-                            feed += "<div class='sns-feed-image-layer m-h-" + feed_height_m + "' style='" + feed_style + "'>";
-                            feed += '<div class="sns-feed-image" style="background-image: url(' + response.data[i].images.standard_resolution.url + ');"></div>'
-                            feed += "</div>";
-                            feed += "<div class='sns-feed-caption-layer qv-font'>";
-                            if (response.data[i].caption !== null) {
-
-                                if (response.data[i].caption.text.length > 0) {
-                                    var text = response.data[i].caption.text;
-                                    var length = 100;
-                                    var trimmedString = text.length > length ? text.substring(0, length - 3) + "..." : text;
-                                    feed += "<p class='sns-feed-caption-contents'>" + trimmedString + "</p>"
-                                }
-                            }
-                            feed += "<span class='sns-feed-caption-info'>";
-                            feed += "<div class='sns-feed-caption-time'>";
-                            feed += "<i class='fa fa-calendar-o'></i>";
-                            feed += getNiceTime(parseInt(response.data[i].created_time) * 1000, new Date(), 1, true);
-                            feed += "</div>";
-                            feed += "<div class='sns-feed-caption-likes'>";
-                            feed += "<i class='fa fa-heart'></i>";
-                            feed += response.data[i].likes.count;
-                            feed += "<i class='fa fa-comment'></i>";
-                            feed += response.data[i].comments.count;
-                            feed += "</div>";
-                            feed += "</span>";
-                            feed += "</div>";
-                            feed += "</a>";
-                            feed += "</div>";
-                            $(vBox.children('div')[0]).append(feed);
-                        }
-                    }
-                }
-            });
         }
 
         function renderTwitterFeed(feed_token, feed_count, feed_column, feed_column_m, feed_height_m, feed_style, vBox) {
