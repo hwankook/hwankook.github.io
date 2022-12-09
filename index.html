@@ -28,8 +28,6 @@
     <meta property="og:url" content="https://hwankook.github.io/">
 
     <!--favicon-->
-    <link rel="shortcut icon" type="image/png" href="../images/favicon.png" sizes="96x96">
-    <link rel="apple-touch-icon" type="image/png" href="../images/favicon.png" sizes="96x96">
     <link rel="canonical" href="https://hwankook.github.io/">
 
     <meta name="theme-color" content="#ffffff">
@@ -3325,7 +3323,6 @@
             removeSiteCopiedElement();
 
             initMobileHeader();
-            // initSnsFeed(); Instagram api denied
             initFixedContents();
             initMenu();
             initTabFrame();
@@ -5023,45 +5020,6 @@
         function onPlayerError(event) { event.target.playVideo(); }
         // Youtube 자동 재생 끝
 
-        // SNS 초기화 시작
-        function initSnsFeed() {
-            //var sns_feed = $("#main_container div[name*='feed']");
-            var sns_feed = $("#main_container div.sns-feed");
-            $.each(sns_feed, function (i, val) {
-                var target = $(val).parents('.box').first();
-                var feed_token = target.data('feed_token');
-                var feed_count = target.data('feed_count');
-                var feed_style = target.data('feed_style');
-                var feed_column = target.data('feed_column');
-                var feed_column_m = target.data('feed_column_m');
-                var feed_height_m = target.data('feed_height_m') == undefined ? $(val).find('.sns-feed-image-layer').height() : target.data('feed_height_m');
-                var feed_type = target.data('feed_type');
-                var vBox = $(val).parents('.view').first();
-
-                if (feed_type != undefined && feed_token != undefined) {
-                    switch (feed_type) {
-                        case 'twitter':
-                            renderTwitterFeed(feed_token, feed_count, feed_column, feed_column_m, feed_height_m, feed_style, vBox);
-                            break;
-                        case 'instagram':
-                            renderInstagramFeed(feed_token, feed_count, feed_column, feed_column_m, feed_height_m, feed_style, vBox);
-                            break;
-                    }
-
-                    target.removeAttr('data-feed_token');
-                }
-            });
-        }
-
-        function initFacebookSDK(d, s, id, c) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.1&appId=786526475012875&autoLogAppEvents=1';
-            if (c) { fjs.addEventListener('load', function (e) { c(null, e); }, false); }
-            fjs.parentNode.insertBefore(js, fjs);
-        }
-
         function refreshInstagramAccessToken(access_token, callback) {
             qvjax_direct(
                 "refresh_instagram_access_token",
@@ -5094,67 +5052,6 @@
                 }
             )
         }
-
-        function renderTwitterFeed(feed_token, feed_count, feed_column, feed_column_m, feed_height_m, feed_style, vBox) {
-            $.ajax({
-                type: "GET",
-                dataType: "jsonp",
-                cache: false,
-                url: location.protocol + '//quv.kr' + "/auth/twitter/tweets_json.php?count=" + feed_count + "&callback=listTweets&screen_name=" + feed_token,
-                success: function (response) {
-                    if (response.length > 0) {
-                        $(vBox.children('div')[0]).empty();
-
-                        for (var i = 0; i < response.length; i++) {
-                            if (typeof response[i].entities.media != 'undefined' && response[i].entities.media.length > 0) {
-                                var imageUrl = response[i].entities.media[0].media_url_https;
-                                var link = response[i].entities.media[0].url;
-                                var feedImageHtml = '<div class="sns-feed-image" style="background-image: url(' + imageUrl + ');"></div>';
-                            } else {
-                                var link = 'http://twitter.com/' + response[i].user.screen_name + '/status/' + response[i].id_str;
-                                var feedImageHtml = '<div class="sns-feed-image"><div><i class="fa fa-twitter"></i></div></div>';
-                            }
-
-                            var feed = '<div class="sns-feed-box grid-' + feed_column + ' grid-m-' + feed_column_m + '">';
-                            feed += "<a target='_blank' href='" + link + "'>";
-                            feed += "<div class='sns-feed-image-layer m-h-" + feed_height_m + "' style='" + feed_style + "'>";
-                            feed += feedImageHtml
-                            feed += "</div>";
-                            if (typeof response[i].entities.media != 'undefined' && response[i].entities.media.length > 0) {
-                                feed += "<div class='sns-feed-caption-layer'>";
-                            } else {
-                                feed += "<div class='sns-feed-caption-layer-display'>";
-                            }
-
-                            if (response[i].text.length > 0) {
-                                var text = response[i].text;
-                                var length = 100;
-                                var trimmedString = text.length > length ? text.substring(0, length - 3) + "..." : text;
-                                feed += "<p class='sns-feed-caption-contents'>" + trimmedString + "</p>"
-                            }
-                            feed += "<span class='sns-feed-caption-info'>";
-                            feed += "	<div class='sns-feed-caption-time'>";
-                            feed += "		<i class='fa fa-calendar-o'></i>";
-                            feed += getNiceTime(new Date(Date.parse(response[i].created_at.replace(/( \+)/, ' UTC$1'))), new Date(), 1, true);
-                            feed += "	</div>";
-                            feed += "	<div class='sns-feed-caption-likes'>";
-                            feed += "		<i class='fa fa-heart'></i>";
-                            feed += response[i].favorite_count;
-                            feed += "		<i class='fa fa-retweet'></i>";
-                            feed += response[i].retweet_count;
-                            feed += "	</div>";
-                            feed += "</span>";
-                            feed += "</div>";
-                            feed += "</a>";
-                            feed += "</div>";
-                            $(vBox.children('div')[0]).append(feed);
-                        }
-                    }
-                }
-            });
-        }
-        // SNS 초기화 끝
-
 
 
         // 모바일용 헤더 초기화
@@ -6442,12 +6339,6 @@
                 lastScrollTop = currentScrollTop;
             });
         }
-        $('.quv-made .logo, .quv-made .txt').on('click', function () {
-            window.open('https://quv.kr', '_blank');
-        });
-        $('.quv-made .logo, .quv-made .btn-quv-start').on('click', function () {
-            window.open('https://quv.kr', '_blank');
-        });
 
         function initAnchor(href) {
             var page = href.slice(1, href.indexOf('?'));
