@@ -195,7 +195,7 @@ body.ft-notosans .accst02 .pack {
     margin-top: 5px
 }
 
-.accst02 .pack_wrap .c>li .b_1 {
+.accst02 .pack_wrap .c>li a {
     position: absolute;
     right: 12px;
     top: 37px;
@@ -206,23 +206,6 @@ body.ft-notosans .accst02 .pack {
     text-align: center;
     height: 24px;
     line-height: 24px;
-    font-weight: 700;
     border-radius: 3px;
     cursor: pointer
-}
-
-.accst02 .pack_wrap .c>li .b_2 {
-    position: absolute;
-    right: 12px;
-    top: 39px;
-    width: 60px;
-    text-align: center;
-    height: 24px;
-    line-height: 24px;
-    font-weight: 700;
-    background-position: center;
-    background-size: 80% auto;
-    background-repeat: no-repeat;
-    background-color: #ffeb00;
-    border-radius: 3px
 }
