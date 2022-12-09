@@ -42,5 +42,5 @@
 @font-face {
     font-family: 'PT Serif';
     font-style: normal;
-    src: url('fonts/PTSerif-Bold.ttf') format('truetype')
+    src: url('../fonts/PTSerif-Bold.ttf') format('truetype')
 }
