@@ -30,11 +30,17 @@
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 900;
-    src: local('Noto Sans KR Black'), local('Noto Sans KR ExtraBold'), local('Noto Sans KR-Black'), local('Noto Sans KR-ExtraBold'), local('NotoSansKR Black'), local('NotoSansKR ExtraBold'), local('NotoSansKR-Black'), local('NotoSansKR-ExtraBold'), url(https://cdn.jsdelivr.net/gh/quvsoftware/font1@1.2/NotoSansKRX.woff) format('woff')
+    src: local('Noto Sans KR Black'), local('Noto Sans KR ExtraBold'), local('Noto Sans KR-Black'), local('Noto Sans KR-ExtraBold'), local('NotoSansKR Black'), local('NotoSansKR ExtraBold'), local('NotoSansKR-Black'), local('NotoSansKR-ExtraBold'), url('../fonts/NotoSansKRT.woff') format('woff')
 }
 
 @font-face {
     font-family: 'Satisfy';
     font-style: normal;
     src: url('../fonts/Satisfy-Regular.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    font-style: normal;
+    src: url('fonts/PTSerif-Bold.ttf') format('truetype')
 }
