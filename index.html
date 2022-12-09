@@ -1995,7 +1995,49 @@
                                     <div id="daumRoughmapContainer1669794513426"
                                         class="root_daum_roughmap root_daum_roughmap_landing view tb-c va-t"
                                         style="text-align: center; display: table-cell;"></div>
+                                    <script>
+                                        const executeScript = () => {
+                                            const scriptTag = document.createElement("script");
+                                            const inlineScript = document.createTextNode(`new daum.roughmap.Lander({
+                                                    "timestamp": "1669794513426",
+                                                    "key": "2csw8",
+                                                    "mapWidth": "360",
+                                                    "mapHeight": "360"
+                                                }).render();`);
+                                            scriptTag.appendChild(inlineScript);
+                                            document.body.appendChild(scriptTag);
+                                        };
 
+                                        const InstallScript = () => {
+                                            (function () {
+                                                var c = location.protocol == "https:" ? "https:" : "http:";
+                                                var a = "6af7869e";
+
+                                                if (window.daum && window.daum.roughmap && window.daum.roughmap.cdn) {
+                                                    return;
+                                                }
+                                                window.daum = window.daum || {};
+                                                window.daum.roughmap = {
+                                                    cdn: a,
+                                                    URL_KEY_DATA_LOAD_PRE: c + "//t1.daumcdn.net/roughmap/",
+                                                    url_protocal: c,
+                                                };
+                                                var b =
+                                                    c +
+                                                    "//t1.daumcdn.net/kakaomapweb/place/jscss/roughmap/" +
+                                                    a +
+                                                    "/roughmapLander.js";
+
+                                                const scriptTag = document.createElement("script");
+                                                scriptTag.src = b;
+                                                document.body.append(scriptTag);
+                                                scriptTag.onload = () => {
+                                                    executeScript();
+                                                };
+                                            })();
+                                        };
+                                        InstallScript();
+                                    </script>
                                 </div>
                                 <style class="mobile-box">
                                     @media (max-width: 767px) {
