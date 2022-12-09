@@ -197,6 +197,7 @@ body.ft-notosans .accst02 .pack {
 
 .accst02 .pack_wrap .c>li a {
     position: absolute;
+    right: 0px;
     width: 60px;
     background: #e8e9e9;
     color: #000;
