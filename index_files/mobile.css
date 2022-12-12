@@ -1005,13 +1005,6 @@ body.live #main_container .popup-container .popup-display-pc {
     bottom: 20px !important;
 }
 
-
-.img-core {
-    /*position: relative;*/
-    /*height: 0 !important;*/
-    /*padding-bottom: 75% !important;*/
-}
-
 /* 2018.07.10 재헌
     모바일에서 image circle 속성이 비정상적으로 동작.
     circle 특성 상 height, width를 지정해줘야 해서 모바일에서 디자인 깨짐
@@ -7120,7 +7113,7 @@ body.live #main_container .popup-container .popup-display-pc {
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    bottom: 10px;
+    bottom: 12px;
 }
 
 .slick-dots li {
@@ -7129,8 +7122,9 @@ body.live #main_container .popup-container .popup-display-pc {
 
 .slick-dots li button {
     display: block;
-    width: 6.5px;
-    height: 6.5px;
+    padding: 0;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     border: 1px solid #E3E3E3;
     background: transparent;
@@ -7139,7 +7133,7 @@ body.live #main_container .popup-container .popup-display-pc {
 }
 
 .slick-dots li.slick-active button {
-    width: 16.5px;
+    width: 17px;
     background: #E3E3E3;
     border-radius: 3px;
 }

@@ -40,7 +40,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <link href="./index_files/bootstrap.css" rel="stylesheet">
     <link href="./index_files/material-icons.min.css" rel="stylesheet">
-    <link href="./index_files/simple-line-icons.css" rel="stylesheet">
     <link href="./index_files/style.css" rel="stylesheet" type="text/css" media="all">
     <link href="./index_files/mobile.css" rel="stylesheet" type="text/css" media="all">
     <link href="./index_files/header.css" rel="stylesheet" type="text/css" media="all">
@@ -606,7 +605,7 @@
                 <div class="view ha-c">
                     <div class="slide_wrap main_slide">
                         <div class="slick-list draggable">
-                            <div class="slick-track" style="opacity: 1; width: 380px;">
+                            <div class="slick-track" style="opacity: 1; max-width: 380px;">
                                 <div class="slick-slide" data-slick-index="0" aria-hidden="true" role="tabpanel"
                                     id="slick-slide00" style="position: relative;" tabindex="-1"
                                     aria-describedby="slick-slide-control00">
@@ -628,16 +627,20 @@
                             </div>
                         </div>
                         <ul class="slick-dots" role="tablist">
-                            <li class="" role="presentation"><button type="button" role="tab" id="slick-slide-control00"
-                                    aria-controls="slick-slide00" aria-label="1 of 2" tabindex="-1">1</button></li>
-                            <li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control01"
-                                    aria-controls="slick-slide01" aria-label="2 of 2" tabindex="-1">2</button></li>
+                            <li class="" role="presentation">
+                                <button type="button" role="tab" id="slick-slide-control00"
+                                    aria-controls="slick-slide00" aria-label="1 of 2" tabindex="-1">1</button>
+                            </li>
+                            <li role="presentation" class="">
+                                <button type="button" role="tab" id="slick-slide-control01"
+                                    aria-controls="slick-slide01" aria-label="2 of 2" tabindex="-1">2</button>
+                            </li>
                         </ul>
                     </div>
                     <script>
                         $(document).ready(function () {
                             $(".slick-track").slick({
-                                autoplay: true,
+                                autoplay: false,
                                 autoplaySpeed: 6000,
                                 fade: true,
                                 infinite: true,
@@ -807,13 +810,11 @@
                     }
                 </style>
             </div>
-            <div class="frm mobile_ele m-pd-h-10 m-pd-v-0" id="fWRz4I" style="display: block;" data-hei="1144px">
+            <div class="frm mobile_ele m-pd-h-10 m-pd-v-0" id="fWRz4I" style="display: block;">
                 <div class="preview"></div>
-
-
                 <div class="view ha-c boxing">
-                    <div class="tb tbu" style="height: 1144px;">
-                        <div class="row clearfix tb-c va-m" style="transform: none; display: table-cell;">
+                    <div class="tb tbu">
+                        <div class=" row clearfix tb-c va-m" style="transform: none; display: table-cell;">
                             <div class="col-sm-6 column">
                                 <div class="box tbu imgBox fade-in qv-ani-ele an-dr10 an-dl0 qv-in-viewport displayed"
                                     data-hei="440px"
@@ -936,8 +937,6 @@
                                     style="display: table; height: auto; margin: 0px; padding: 0px; background: none rgba(0, 0, 0, 0); text-align: left; border: none; border-radius: 0px;"
                                     data-hei="auto" data-m-hei="50px">
                                     <div class="preview"></div>
-
-
                                     <div class="view tb-c va-m" style="display: table-cell;">
                                         <div class="drag_inner qv-text" contenteditable="false">
                                             <p class="text-m" style="text-align: center;"><span
@@ -977,8 +976,6 @@
                                 <div class="box tbu lineHorizontalBox mobile_ele displayed"
                                     style="height: 50px; display: table;" data-m-hei="50px" data-hei="50px" id="bc7NHA">
                                     <div class="preview"></div>
-
-
                                     <div class="view tb-c va-m">
                                         <a href="#" data-target="#LineHorizontalModal" data-toggle="modal"
                                             data-obj="box" class="preview-layer"></a>
@@ -1126,8 +1123,6 @@
                                     style="display: table; margin: 0px; padding: 0px; background: none rgba(0, 0, 0, 0); text-align: center; border: none; border-radius: 0px; height: auto;"
                                     data-allow-download="false" data-m-hei="" data-hei="auto">
                                     <div class="preview"></div>
-
-
                                     <div class="view tb-c va-m" style="text-align: center; display: table-cell;">
                                         <a class="preview-layer" href="#" data-target="#GalleryBoardModal"
                                             data-toggle="modal" data-obj="box"></a>
@@ -1748,7 +1743,8 @@
                 <div class="calanderSection sectionMg layer anibox clearfix">
                     <div class="calwrap">
                         <div class="f20 caltit"
-                            style="font-size: 1.2em; font-family: Noto Sans KR; margin-bottom: 24px;">2월</div>
+                            style="font-size: 1.2em; font-family: Noto Sans KR; margin-bottom: 24px;">2월
+                        </div>
                         <table class="calander" id="calander">
                             <thead>
                                 <tr>
@@ -1858,7 +1854,8 @@
                                         <div class="drag_inner qv-text" contenteditable="false">
                                             <p class="text-m" style="text-align: center;">
                                                 <font face="PT Serif"><span
-                                                        style="font-size: 20px;"><b>Location</b></span></font>
+                                                        style="font-size: 20px;"><b>Location</b></span>
+                                                </font>
                                             </p>
                                         </div>
                                     </div>
