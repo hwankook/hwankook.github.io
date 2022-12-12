@@ -5406,29 +5406,6 @@
             }
         }
 
-
-        function viewImageFullSize(obj) {
-            $('body').addClass('modal-open');
-            $('#gallery-board-img01').fadeOut(0, 'linear');
-
-            var modal = document.getElementById('gallery_board_image_modal');
-            var modalImg = document.getElementById("gallery-board-img01");
-
-            $('.gallery-board-modal-right').hide();
-            $('.gallery-board-modal-left').hide();
-
-            var bg = $(obj).find('.img-core').css('background-image');
-            bg = bg.replace('url(', '').replace(')', '').replace(/\"/gi, "");
-
-            bg = bg.replace(/_800/g, '_1920');
-            modalImg.src = bg;
-            modalImg.onload = function () {
-                $('#gallery-board-img01').fadeIn(120, 'linear');
-            };
-
-            modal.style.display = "flex";
-        }
-
         function initGalleryBoardImageModal(img) {
             if ($('.gallery-board-modal-content').hasClass('size-original')) {
                 $(img).css('top', 0);

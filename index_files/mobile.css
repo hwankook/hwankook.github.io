@@ -7113,7 +7113,7 @@ body.live #main_container .popup-container .popup-display-pc {
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    bottom: 12px;
+    bottom: 5px;
 }
 
 .slick-dots li {
@@ -7133,8 +7133,8 @@ body.live #main_container .popup-container .popup-display-pc {
 }
 
 .slick-dots li.slick-active button {
-    width: 17px;
-    background: #E3E3E3;
+    background: #81d8d0;
+    border: 1px solid #81d8d0;
     border-radius: 3px;
 }
 
