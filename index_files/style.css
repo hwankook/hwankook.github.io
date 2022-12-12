@@ -5202,9 +5202,7 @@ body .ml-item.join-link {
     overflow: auto;
     /* Enable scroll if needed */
     /*overflow-y: scroll !important;*/
-    background-color: rgb(0, 0, 0);
     /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.9);
     /* Black w/ opacity */
     /*display: flex;*/
     flex-direction: column;
@@ -5216,6 +5214,7 @@ body .ml-item.join-link {
 #gallery_board_image_modal {
     user-select: none;
     overflow: hidden;
+    background-color: #000;
 }
 
 .gallery-modal-content,
@@ -5259,7 +5258,6 @@ body .ml-item.join-link {
 .gallery-board-modal-content.size-original {
     position: fixed;
     max-height: none !important;
-    /*max-width: none !important;*/
     top: 0;
 }
 
@@ -5271,49 +5269,8 @@ body .ml-item.join-link {
     bottom: 0;
 }
 
-.gallery-board-magnifier {
-    position: fixed;
-    right: 25px;
-    top: 75px;
-    font-size: 32px;
-}
-
-.gallery-board-magnifier>div {
-    padding: 10px 0;
-    cursor: pointer;
-    color: #8d8d8d;
-}
-
-.gallery-board-magnifier>div:hover {
-    color: #d2d2d2;
-}
-
-.gallery-board-magnifier>div>i {
-    font-weight: bold;
-}
-
-.gallery-board-magnifier>div.gallery-board-magnifier-original-size:after {
-    /*content: '원본 크기';*/
-    /*position: absolute;*/
-    /*display: block;*/
-    /*bottom: -6px;*/
-    /*left: -6px;*/
-    /*width: auto;*/
-    /*font-size: 11px;*/
-    /*white-space: pre;*/
-}
-
-.gallery-board-magnifier>div.gallery-board-magnifier-original-size>div {
-    font-size: 10px;
-    /*white-space: pre-line;*/
-    width: 33px;
-    text-align: center;
-    white-space: nowrap;
-}
-
 .gallery-board-modal-right {
     position: fixed;
-    top: 50%;
     right: 20px;
     font-size: 30px;
     color: #ffffff;
@@ -5324,7 +5281,6 @@ body .ml-item.join-link {
 
 .gallery-board-modal-left {
     position: fixed;
-    top: 50%;
     left: 20px;
     font-size: 30px;
     color: #ffffff;
@@ -5348,7 +5304,7 @@ body .ml-item.join-link {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #ffffff;
+    background: #000;
     transition: all 0.3s;
     opacity: 0;
 }
@@ -5368,31 +5324,12 @@ body .ml-item.join-link {
 #gallery_board_cancel {
     position: fixed;
     top: 5px;
-    right: 25px;
+    right: 5px;
     font-size: 55px;
     font-weight: normal;
     color: #8d8d8d;
     opacity: 1;
     text-shadow: none;
-}
-
-.gallery-board-modal-download {
-    position: fixed;
-    top: 15px;
-    left: 20px;
-    color: #fff;
-    background: #565656;
-    padding: 7px 12px;
-    border-radius: 3px;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.gallery-board-modal-download:hover {
-    background: #424242;
 }
 
 
@@ -6201,391 +6138,6 @@ li .read-comment {
     display: inline-block;
     vertical-align: text-top;
     background: transparent;
-}
-
-/* ckeditor */
-.write-body .cke_combo__font {
-    display: none;
-}
-
-.write-body {
-    position: relative;
-    margin: 50px 20%;
-    display: table;
-    width: 60%;
-    height: 100vh;
-    /*color: #494949;*/
-    /*font-family: sans-serif;*/
-}
-
-.write-body div {
-    padding: 10px;
-}
-
-.write-close {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 33px;
-    height: 33px;
-    cursor: pointer;
-}
-
-.write-close:before,
-.write-close:after {
-    position: absolute;
-    top: 0;
-    left: 15px;
-    content: ' ';
-    height: 33px;
-    width: 2px;
-    background-color: #333;
-    transition: 0.25s ease-out all;
-}
-
-.write-close:before {
-    transform: rotate(-45deg);
-}
-
-.write-close:after {
-    transform: rotate(45deg);
-}
-
-.write-title,
-.write-title input {
-    display: inline-block;
-    width: 100%;
-    font-family: Noto Sans KR;
-}
-
-.write-title input.write-title-input {
-    width: 100%;
-    /*margin: 10px;*/
-    /*padding: 25px 12px;*/
-    border: 0;
-    border-bottom: 1px solid #7b7b7b;
-    border-radius: 0;
-    box-shadow: none;
-    transition: 0.2s ease all;
-}
-
-.write-title .write-title-options {
-    display: inline-block;
-    /*margin-top: 10px;*/
-    padding: 0;
-    font-size: 14px;
-    float: right;
-}
-
-.write-title .write-title-options>div {
-    display: inline-block;
-}
-
-.write-title .write-title-options input#write-title-options-notice,
-.write-title .write-title-options input#write-title-options-secret {
-    width: 15px;
-    height: 15px;
-    vertical-align: middle;
-    margin-right: 10px;
-    margin-left: 20px;
-}
-
-.write-title .write-nonmember-options {
-    display: inline-block;
-    padding: 0;
-    vertical-align: middle;
-}
-
-.write-title .write-nonmember-options input.write-nonmember-options-writer,
-.write-title .write-nonmember-options input.write-nonmember-options-password {
-    border: 0;
-    border-bottom: 1px solid #7b7b7b;
-    border-radius: 0;
-    box-shadow: none;
-    transition: 0.2s ease all;
-    width: 150px;
-    padding: 10px;
-    margin-right: 5px;
-    height: 34px;
-}
-
-.write-title input:focus {
-    border-bottom: 1px solid #7b7b7b;
-    outline: 0px;
-    box-shadow: none;
-}
-
-.write-title input:disabled {
-    background: transparent !important;
-}
-
-.write-title .write-category {
-    display: none;
-    width: 200px;
-    padding: 0;
-    vertical-align: middle;
-}
-
-.write-category-show {
-    display: inline-block !important;
-}
-
-.write-title .write-category select.write-category-select {
-    /*border: 0px;*/
-    /*border-bottom: 1px solid #7b7b7b;*/
-    border: 1px solid #ccc;
-    border-radius: 0;
-    box-shadow: none;
-    transition: 0.2s ease all;
-}
-
-.write-title .write-category select.write-category-select:disabled {
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-}
-
-/*.write-title .write-category select.write-category-select option:first-child{*/
-/*font-weight: bold;*/
-/*}*/
-
-#cke_write-content-textarea {
-    overflow: hidden;
-}
-
-.write-content {
-    position: relative;
-}
-
-.write-content div {
-    padding: 0px !important;
-}
-
-.write-content textarea {
-    height: 400px;
-    border: 1px solid #7b7b7b;
-    border-radius: 0;
-    box-shadow: none;
-    resize: none;
-    transition: 0.2s ease all;
-}
-
-.write-content textarea:focus {
-    border: 1px solid #7b7b7b;
-    outline: 0px;
-    box-shadow: none;
-}
-
-.write-options {
-    display: inline-block;
-}
-
-.write-options>div {
-    position: relative;
-    display: inline-block;
-}
-
-.write-options i {
-    font-size: 30px;
-    cursor: pointer;
-}
-
-.write-options>div:hover {
-    /*transform: scale(1.1);*/
-}
-
-.write-options>div:hover>div:before {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    width: 1px;
-    height: 20px;
-    border-right: 1px solid #ccc;
-    top: calc(50% - 10px);
-    left: 0;
-}
-
-.write-options>div:hover>div:after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    width: 1px;
-    height: 20px;
-    border-right: 1px solid #ccc;
-    top: calc(50% - 10px);
-    right: 0;
-}
-
-.write-options>div>div {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-    max-width: 0px;
-    transition: 0.3s max-width;
-    padding: 0px;
-    white-space: nowrap;
-    cursor: pointer;
-    vertical-align: text-bottom;
-    height: 34px;
-    font-size: 14px;
-}
-
-.write-options>div:hover>div {
-    max-width: 100px;
-}
-
-.write-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-.write-button-confirm,
-.write-button-cancel {
-    display: flex;
-    width: 180px;
-    height: 40px;
-    align-items: center;
-    justify-content: center;
-    margin: 0 2px;
-    cursor: pointer;
-}
-
-.write-button-confirm {
-    background-color: #505050;
-    border: 1px solid #505050;
-    color: #fff;
-}
-
-.write-button-cancel {
-    background-color: transparent;
-    border: 1px solid #cdcdcd;
-    color: #494949;
-}
-
-.write-button-confirm:hover {
-    /*box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);*/
-    background-color: #000;
-    color: #fff;
-}
-
-.write-button-confirm>div,
-.write-button-cancel>div {
-    line-height: 1;
-    text-align: center;
-}
-
-/* 2020.02.11 재헌
- * 첨부 이미지 프로세스 변경
- */
-.write-upload-images {
-    display: none;
-}
-
-.write-upload-images-list {
-    background: #f6f6f6;
-    border-radius: 2px;
-    border: 1px solid #eee;
-    font-size: 0;
-    height: auto;
-}
-
-.write-upload-images-list>div.write-upload-image-item {
-    position: relative;
-    display: inline-block;
-    background: url(https://cdn.quv.kr/cxzvffdy1%2Fboard%2Fimage%2F5e422d6b644af.png) center center / cover no-repeat scroll transparent;
-    width: 70px;
-    height: 70px;
-    margin: 4px;
-    cursor: pointer;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-.write-upload-images-list>div.write-upload-image-item.active:after {
-    content: attr(data-active-text);
-    font-size: 10px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: rgba(0, 170, 255, 0.9);
-    color: #fff;
-    padding: 3px;
-    width: 100%;
-    text-align: center;
-}
-
-.write-upload-images-list .write-upload-image-item-delete {
-    display: none;
-    font-size: 12px;
-    background: #FF5722;
-    padding: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    align-items: center;
-    justify-content: center;
-    width: 18px;
-    height: 18px;
-    color: #fff;
-}
-
-.write-upload-images-list>div.write-upload-image-item:hover .write-upload-image-item-delete {
-    display: flex;
-}
-
-.write-attachments-list ul li {
-    position: relative;
-    background-color: #f6f6f6;
-    color: #000;
-    padding: 5px 8px;
-    margin: 5px;
-    border-radius: 2px;
-    border: 1px solid #eee;
-}
-
-.write-attachments-list ul li>div {
-    display: inline-block;
-    padding: 2px 10px;
-    font-size: 14px;
-}
-
-.write-attachments-filename {
-    min-width: 250px;
-    font-weight: bold;
-}
-
-.write-attachments-filesize {
-    min-width: 100px;
-}
-
-.write-attachments-filename>i {
-    font-size: 16px;
-    padding-right: 5px;
-    vertical-align: middle;
-}
-
-.write-attachments-delete {
-    font-size: 24px !important;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 10px;
-}
-
-.write-service {
-    color: #000;
-}
-
-.write-service>input {
-    width: 16px;
-    height: 16px;
-    vertical-align: bottom;
-}
-
-.write-service>a {
-    color: #3f51b5 !important;
-    padding: 0 5px;
-    text-decoration: underline;
 }
 
 .loading-mask {

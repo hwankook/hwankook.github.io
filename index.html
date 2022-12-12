@@ -5271,7 +5271,6 @@
         <div class="gallery-board-modal-left">
             <i class="fa fa-chevron-left"></i>
         </div>
-        <div class="gallery-board-modal-download"><i class="icon-paper-clip" aria-hidden="true"></i></div>
     </div>
 
     <div class="modal in-editor-modal fade" id="CalendarScheduleViewModal" tabindex="-1" role="dialog">
@@ -5370,13 +5369,6 @@
                 });
 
                 var allowDownload = $(obj).parents('.galleryBox').first().attr('data-allow-download');
-                var downloadClip = $('#gallery_board_image_modal .gallery-board-modal-download');
-                if (allowDownload == 'false') {
-                    downloadClip.hide();
-                }
-                else {
-                    downloadClip[0].style.removeProperty('display');
-                }
 
                 modal.style.display = "flex";
                 $(modalImg).removeClass(function (index, className) {
@@ -5493,22 +5485,6 @@
                 image.removeClass(function (index, className) {
                     return (className.match(/(^|\s)size-x-\S+/g) || []).join(' ');
                 });
-            }
-        });
-
-        $('#gallery_board_image_modal').delegate('.gallery-board-modal-download', 'click touch', function () {
-            var url = $('#gallery-board-img01').attr('src');
-            var name = url.split('/').pop();
-
-            if (!url || !name) return;
-            if (navigator.userAgent.toLowerCase().indexOf('safari') > -1 &&
-                navigator.userAgent.toLowerCase().indexOf('chrome') == -1) {
-                var a = $("<a>").attr("href", url).attr("download", name).appendTo("body");
-                a[0].click();
-                a.remove();
-            }
-            else {
-                post_redirect('/module/board/download.php', { 'url': url, 'name': name }, '_top');
             }
         });
 
