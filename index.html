@@ -3069,11 +3069,9 @@
                                     style="height: 50px; display: table;" data-m-hei="50px" data-hei="50px" id="bE6tF0">
                                     <div class="preview"></div>
                                     <script>
-                                        $(document).ready(function () {
-                                            $(".pack").click(function () {
-                                                $(this).parent().toggleClass("active");
-                                            });
-                                        });
+                                        function accordion(e) {
+                                            $(e).toggleClass("active");
+                                        };
 
                                         function copy_account(element_id) {
                                             // Get the text field
@@ -3085,7 +3083,7 @@
 
                                             // Alert the copied text
                                             alert("복사가 완료되었습니다.");
-                                        }
+                                        };
                                     </script>
                                     <div class="view tb-c va-m">
                                         <a href="#" data-target="#LineHorizontalModal" data-toggle="modal"
@@ -3141,7 +3139,7 @@
                                         <div class="preview"></div>
                                         <div id="tel_ul_3"
                                             class="accst02 anibox hd visible animated fadeInUp full-visible">
-                                            <div class="pack_wrap clearfix">
+                                            <div class="pack_wrap clearfix" onclick="accordion(this)">
                                                 <a class="pack pack_man">신랑측 계좌번호<i class="fa fa-chevron-down"
                                                         style="color:#585e6b;font-size:20px;"></i></a>
                                                 <ul class="c accordion1 cnt1">
@@ -3163,7 +3161,7 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="pack_wrap clearfix">
+                                            <div class="pack_wrap clearfix" onclick="accordion(this)">
                                                 <a class="pack pack_woman">신부측 계좌번호<i class="fa fa-chevron-down"
                                                         style="color:#585e6b;font-size:20px;"></i></a>
                                                 <ul class="c accordion2 cnt1">
