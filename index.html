@@ -1641,6 +1641,34 @@
                             </div>
                         </div>
                     </div>
+                    <script>
+                        function photo_more() {
+                            const gallery = document.getElementById("gallery-1x9AcJ");
+                            const photo_list = gallery.getElementsByClassName("gallery-board-box");
+                            const photo_length = photo_list.length;
+                            $("#gallery-1x9AcJ>div:nth-child(-n" + photo_length + ")").show();
+                            $("#btnUxuqC").hide();
+                        }
+                    </script>
+                    <div style="margin: 20px auto;">
+                        <div id="btnUxuqC" class="button-area"
+                            style="background-color:#ffffff;width:150px;padding:5px 0px;border:1px solid #171717;border-radius:100px;text-align: center !important; height: 35px;"
+                            onclick="photo_more(); return false;">
+                            <div class="row">
+                                <div class="col-sm-1 col-xs-1">
+                                    <i class="fa fa-chevron-down" style="color:#585e6b;"></i>
+                                </div>
+                                <div class="col-sm-10 col-xs-10">
+                                    <p style="font-family:'Noto Sans KR';">
+                                        &nbsp;사진 더보기&nbsp;
+                                    </p>
+                                </div>
+                                <div class="col-sm-1 col-xs-1">
+                                    <i class="fa fa-chevron-down" style="color:#585e6b;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <style class="mobile-frm">
                     @media (max-width: 767px) {
@@ -1651,90 +1679,6 @@
 
                     .mobile_editor_mode #fJSMF7>.view>.tb {
                         height: auto !important;
-                    }
-                </style>
-            </div>
-            <div class="frm mobile_ele m-pd-h-10 m-pd-v-0" style="text-align: center;" id="fLlI32" data-hei="auto"
-                data-m-hei="74px">
-                <div class="preview"></div>
-                <div class="view ha-c">
-                    <div class="tb tbu">
-                        <div class="row clearfix tb-c va-m" style="transform: none;">
-                            <div class="col-sm-12 column">
-                                <div class="box tbu btnBox mobile_ele displayed"
-                                    style="text-align: center; display: table; height: 65px; margin: 0px; padding: 0px; background: none rgba(0, 0, 0, 0); border: none; border-radius: 0px;"
-                                    id="bUN31W" data-hei="65px" data-m-hei="65px">
-                                    <div class="preview"></div>
-
-                                    <script>
-                                        function photo_more() {
-                                            const gallery = document.getElementById("gallery-1x9AcJ");
-                                            const photo_list = gallery.getElementsByClassName("gallery-board-box");
-                                            const photo_length = photo_list.length;
-                                            var count = 0;
-                                            Array.from(photo_list).forEach(x => {
-                                                if (window.getComputedStyle(x).display !== "none") {
-                                                    count += 1;
-                                                }
-                                            });
-                                            const nth = (parseInt(count / 9) + 1) * 9;
-                                            if (nth < photo_length) {
-                                                $("#gallery-1x9AcJ>div:nth-child(-n" + nth + ")").css({
-                                                    "display": "block"
-                                                });
-                                            } else {
-                                                $("#gallery-1x9AcJ>div:nth-child(-n" + photo_length + ")").css({
-                                                    "display": "block"
-                                                });
-                                                $("#bUN31W").hide();
-                                            }
-                                        }
-                                    </script>
-
-                                    <div class="view tb-c va-m" style="display: table-cell;">
-                                        <div id="btnUxuqC" class="button-area"
-                                            style="background-color:#ffffff;width:150px;padding:5px 0px;border:1px solid #171717;border-radius:100px;text-align: center !important; height: 35px;"
-                                            onclick="photo_more()">
-                                            <div class="row">
-                                                <div class="col-sm-1 col-xs-1">
-                                                    <i class="fa fa-chevron-down" style="color:#585e6b;"></i>
-                                                </div>
-                                                <div class="col-sm-10 col-xs-10">
-                                                    <p style="font-family:'Noto Sans KR';">
-                                                        &nbsp;사진 더보기&nbsp;
-                                                    </p>
-                                                </div>
-                                                <div class="col-sm-1 col-xs-1">
-                                                    <i class="fa fa-chevron-down" style="color:#585e6b;"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <style class="mobile-box">
-                                        @media (max-width: 767px) {
-                                            #bUN31W {
-                                                height: 65px !important;
-                                            }
-                                        }
-
-                                        .mobile_editor_mode #bUN31W {
-                                            height: 65px !important;
-                                        }
-                                    </style>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <style class="mobile-frm">
-                    @media (max-width: 767px) {
-                        #fLlI32>.view>.tb {
-                            height: 74px !important;
-                        }
-                    }
-
-                    .mobile_editor_mode #fLlI32>.view>.tb {
-                        height: 74px !important;
                     }
                 </style>
             </div>
@@ -3152,7 +3096,8 @@
                                                                 style="letter-spacing: 2px;">
                                                                 <label for="actnm1">우체국</label>
                                                                 <input id="actnm1" type="text" value="11670-05-000612"
-                                                                    readonly style="border:0 solid black;">
+                                                                    readonly
+                                                                    style="border:0 solid black; letter-spacing: 2px;">
                                                             </div>
                                                             <div class="col-sm-2 col-xs-2">
                                                                 <a onclick="copy_account('actnm1')">복사하기</a>
@@ -3174,7 +3119,8 @@
                                                                 style="letter-spacing: 2px;"">
                                                                 <label for=" actnm2">국민은행</label>
                                                                 <input id="actnm2" type="text" value="097-21-0421-279"
-                                                                    readonly style="border:0 solid black;">
+                                                                    readonly
+                                                                    style="border:0 solid black; letter-spacing: 2px;">
                                                             </div>
                                                             <div class="col-sm-2 col-xs-2">
                                                                 <a onclick="copy_account('actnm2')">복사하기</a>
