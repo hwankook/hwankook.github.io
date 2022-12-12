@@ -1667,7 +1667,7 @@
                                     <div class="preview"></div>
 
                                     <script>
-                                        function load() {
+                                        function photo_more() {
                                             const gallery = document.getElementById("gallery-1x9AcJ");
                                             const photo_list = gallery.getElementsByClassName("gallery-board-box");
                                             const photo_length = photo_list.length;
@@ -1681,12 +1681,12 @@
                                             if (nth < photo_length) {
                                                 $("#gallery-1x9AcJ>div:nth-child(-n" + nth + ")").css({
                                                     "display": "block"
-                                                })
+                                                });
                                             } else {
                                                 $("#gallery-1x9AcJ>div:nth-child(-n" + photo_length + ")").css({
                                                     "display": "block"
-                                                })
-                                                $("#bUN31W").hide()
+                                                });
+                                                $("#bUN31W").hide();
                                             }
                                         }
                                     </script>
@@ -1694,7 +1694,7 @@
                                     <div class="view tb-c va-m" style="display: table-cell;">
                                         <div id="btnUxuqC" class="button-area"
                                             style="background-color:#ffffff;width:150px;padding:5px 0px;border:1px solid #171717;border-radius:100px;text-align: center !important; height: 35px;"
-                                            onclick=load()>
+                                            onclick="photo_more()">
                                             <div class="row">
                                                 <div class="col-sm-1 col-xs-1">
                                                     <i class="fa fa-chevron-down" style="color:#585e6b;"></i>
