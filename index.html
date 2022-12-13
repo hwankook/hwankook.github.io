@@ -1247,11 +1247,12 @@
                             grid: {
                                 rows: 3,
                             },
-                            spaceBetween: 30,
+                            spaceBetween: 60,
                             pagination: {
                                 el: ".swiper-pagination",
                                 clickable: true,
                             },
+                            speed: 0,
                         });
                     </script>
                 </div>
@@ -2942,9 +2943,6 @@
         </div>
     </div>
     <script>
-        $('#modal-vrly31').on('shown.bs.modal', function () {
-            alert('clicked!')
-        })
         var swiper = new Swiper(".swiper-container", {
             pagination: {
                 slidesPerView: 1,
@@ -2954,6 +2952,7 @@
                 el: ".swiper-pagination",
                 dynamicBullets: true,
             },
+            speed: 0,
         });
     </script>
 </body>
