@@ -38,6 +38,10 @@
     height: 100%;
 }
 
+.css-gg3rpm {
+    background-color: #000;
+}
+
 .css-gg3rpm::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 0px;
@@ -59,12 +63,14 @@
     transform: translateY(-50%) !important;
     width: 100%;
     height: 100%;
+    max-height: 100%;
     justify-content: center;
 }
 
 .css-np4ww0 {
     display: flex;
     width: 100%;
+    height: 100%;
 }
 
 .css-j5vjle {
@@ -105,7 +111,8 @@
 
 .css-79ar9w {
     position: absolute;
-    right: 0rem;
+    top: 0.45rem;
+    right: 0.45rem;
     z-index: 30;
     display: flex;
     opacity: 0.75;
@@ -130,8 +137,8 @@
     font-size: var(--system-14-font-size);
     line-height: var(--system-14-line-height);
     cursor: pointer;
-    color: rgb(0, 0, 0);
-    fill: rgb(255, 255, 255);
+    color: #fff;
+    fill: #fff;
     height: 24;
     width: 24;
     display: block;

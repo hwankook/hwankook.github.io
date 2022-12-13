@@ -7148,10 +7148,9 @@ body.live #main_container .popup-container .popup-display-pc {
 
 
 .calwrap {
-    padding: 30px;
     margin: auto;
     max-width: 90%;
-    height: 320px;
+    max-height: 320px;
 }
 
 .calander {
