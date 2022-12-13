@@ -7152,15 +7152,11 @@ body.live #main_container .popup-container .popup-display-pc {
     margin: auto;
     max-width: 90%;
     height: 320px;
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/calendar.jpg') no-repeat;
-    background-size: 100%;
-    background-position-y: 30%;
 }
 
 .calander {
     width: 100%;
     margin: 0 auto;
-    margin-bottom: 20px;
 }
 
 #calander>thead>tr>th {
