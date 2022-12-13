@@ -63,6 +63,10 @@
 
 .css-np4ww0 {
     outline: 0 !important;
+    transform: var(--tw-transform);
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
     width: 100%;
     max-width: 32rem;
     border: 3px solid;
