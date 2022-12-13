@@ -1377,6 +1377,30 @@
                             </tbody>
                         </table>
                     </div>
+                    <div style="font-family: Noto Sans KR; margin-top: 10px;">
+                        <div
+                            style="opacity: 1; transform: translate3d(0px, 0px, 0px); transition: all 1s cubic-bezier(0, 0, 0.2, 1) 0s;">
+                            <p class="css-14thsib">2023년 2월 25일 토요일 오후 1시 </p>
+                        </div>
+                        <div
+                            style="opacity: 1; transform: translate3d(0px, 0px, 0px); transition: all 1s cubic-bezier(0, 0, 0.2, 1) 0s;">
+                            <div class="css-1jwssqx">
+                                이환국<span style=color:#ff0000;>&nbsp;<i class="fa fa-heart">&nbsp;</i></span>신은경의 결혼식이
+                                <input id="d-day" type="text" readonly
+                                    style="border:0 solid black; width: 17px; padding: 0; color:#ff0000; font-weight: bold;">일
+                                남았습니다
+                            </div>
+                            <script>
+                                $(document).ready(function () {
+                                    const d_day = new Date("2023-02-25 13:00:00+0900");
+                                    const today = new Date();
+                                    const diffs = d_day - today;
+                                    const days = Math.floor(diffs / 1000 / 60 / 60 / 24);
+                                    document.getElementById("d-day").value = days;
+                                });
+                            </script>
+                        </div>
+                    </div>
                 </div>
                 <div class="view ha-c">
                     <div class="tb tbu" style="height: auto;">
