@@ -1,8 +1,8 @@
-.css-1o521gq {
+.css-1uyb5xj {
     position: relative;
-    padding-top: 100%;
     padding-bottom: 2.25em;
 }
+
 
 .css-1ob7dfu {
     position: absolute;
@@ -58,40 +58,13 @@
     top: 50%;
     transform: translateY(-50%) !important;
     width: 100%;
+    height: 100%;
     justify-content: center;
 }
 
 .css-np4ww0 {
     display: flex;
-    align-items: center;
-    -webkit-text-size-adjust: 100%;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    outline: 0 !important;
-    box-sizing: border-box;
-    --tw-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-    transform: var(--tw-transform);
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
     width: 100%;
-    max-width: 32rem;
-    border: 3px solid;
-    margin-top: auto;
-    margin-bottom: auto;
-    overflow: hidden;
-    border-radius: 0.375rem;
-    --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    outline-offset: 2px;
-    --tw-border-opacity: 1;
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    border-color: rgba(250, 250, 250, var(--tw-border-opacity));
-    --tw-bg-opacity: 1;
-    background-color: rgba(250, 250, 250, var(--tw-bg-opacity));
-    height: 100%;
 }
 
 .css-j5vjle {
@@ -132,8 +105,7 @@
 
 .css-79ar9w {
     position: absolute;
-    top: 0.3rem;
-    right: 0.3rem;
+    right: 0rem;
     z-index: 30;
     display: flex;
     opacity: 0.75;
@@ -192,4 +164,8 @@
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 3;
+}
+
+div[class*='swiper-button-'] {
+    color: #fff;
 }
