@@ -52,11 +52,13 @@
 
 .css-nk1amc {
     box-sizing: border-box;
-    display: inline-block;
+    display: flex;
     margin: 0;
     position: absolute;
     top: 50%;
-    transform: translateX(-50%) translateY(-50%) !important;
+    transform: translateY(-50%) !important;
+    width: 100%;
+    justify-content: center;
 }
 
 .css-np4ww0 {
