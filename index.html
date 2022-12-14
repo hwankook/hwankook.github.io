@@ -2808,9 +2808,6 @@
                     </button>
                     <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-android css-y297zm modal-swiper"
                         color="#363636" style="display: flex; flex-direction: column-reverse; align-items: center;">
-                        <div
-                            class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets modal-pagination">
-                        </div>
                         <div class="swiper-wrapper">
                             <div class="swiper-slide" data-swiper-slide-index="0" style="width: 366px;">
                                 <img src="../images/gallery/1.jpg" alt="0" class="css-15ndyqd">
@@ -2927,15 +2924,13 @@
         });
 
         const modal_swiper = new Swiper(".modal-swiper", {
+            spaceBetween: 0,
             pagination: {
                 slidesPerView: 1,
                 grid: {
                     rows: 1,
                 },
-                el: ".modal-pagination",
-                dynamicBullets: true,
             },
-            spaceBetween: 10,
             speed: 0,
             navigation: {
                 nextEl: ".swiper-button-next",
