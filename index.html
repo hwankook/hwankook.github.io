@@ -614,12 +614,12 @@
                         <div class="swiper-wrapper selfie-wrapper">
                             <div class="swiper-slide selfie-slide" data-swiper-slide-index="0" style="width: 384px;">
                                 <div class="btn selfie-button" data-toggle="modal" data-target="#selfie-modal-swiper">
-                                    <img src="../images/carousel1.jpg" alt="1" class="selfie-image">
+                                    <img src="../images/carousel1.jpg" alt="0" class="selfie-image">
                                 </div>
                             </div>
                             <div class="swiper-slide selfie-slide" data-swiper-slide-index="1" style="width: 384px;">
                                 <div class="btn selfie-button" data-toggle="modal" data-target="#selfie-modal-swiper">
-                                    <img src="../images/carousel2.jpg" alt="2" class="selfie-image">
+                                    <img src="../images/carousel2.jpg" alt="1" class="selfie-image">
                                 </div>
                             </div>
                         </div>
@@ -637,7 +637,6 @@
                             },
                             el: ".selfie-pagination",
                             dynamicBullets: true,
-                            clickable: true,
                         },
                         speed: 0,
                         centeredSlides: true,
@@ -2951,7 +2950,6 @@
             },
             centeredSlides: true,
         });
-
         selfie_swiper.controller.control = selfie_swiper
         selfie_modal_swiper.controller.control = selfie_swiper
 
@@ -2973,11 +2971,50 @@
 
 
         $(document).ready(function () {
+            $(".selfie-button").click(function (e) {
+                const index = e.srcElement.alt
+                selfie_modal_swiper.slideTo(index);
+            });
+
             $(".css-vrly31").click(function (e) {
                 const index = e.srcElement.alt
                 gallery_modal_swiper.slideTo(index);
             });
         });
+
+        /* 뒤로 가기 버튼 */
+        function handleBackPress(event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            $('.modal').modal('hide');
+            $('.modal-backdrop').remove();
+        }
+
+        var closedModalHashStateId = "#modalClosed";
+        var openModalHashStateId = "#modalOpen";
+
+        /* Updating the hash state creates a new entry
+         * in the web browser's history. The latest entry in the web browser's
+         * history is "modal.html#modalClosed". */
+        window.location.hash = closedModalHashStateId;
+
+        $(window).on('popstate', this.handleBackPress);
+        document.addEventListener("backbutton", this.handleBackPress, false);
+
+        /* The latest entry in the web browser's history is now "modal.html#modalOpen".
+         * The entry before this is "modal.html#modalClosed". */
+        $('.modal').on('show.bs.modal', function (e) {
+            window.history.pushState('forward', null, './' + openModalHashStateId);
+        });
+
+        /* When the user closes the modal using the Twitter Bootstrap UI, 
+         * we just return to the previous entry in the web 
+         * browser's history, which is "modal.html#modalClosed". This is the same thing
+         * that happens when the user clicks the web browser's back button. */
+        $('.modal').on('hide.bs.modal', function (e) {
+            window.history.back();
+        });  
     </script>
 </body>
 
