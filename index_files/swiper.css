@@ -175,16 +175,3 @@ div[class*='swiper-button-'] {
     background-size: 100% auto;
     background-position: center;
 }
-
-.swiper-button-prev {
-    background: url(../images/ico_prev.png) no-repeat;
-}
-
-.swiper-button-next {
-    background: url(../images/ico_next.png) no-repeat;
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    display: none;
-}
