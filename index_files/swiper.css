@@ -1,18 +1,12 @@
-.css-1uyb5xj {
-    position: relative;
+.selfie-swiper {
+    padding-bottom: 0.25em;
+}
+
+.thumbnail-swiper {
     padding-bottom: 2.25em;
 }
 
-
-.css-1ob7dfu {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-}
-
-.css-mes92c {
+.gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.25em;
@@ -20,20 +14,12 @@
     padding-right: 0.25em;
 }
 
-.css-vrly31 {
-    box-sizing: border-box;
-    position: relative;
+.gallery-button {
+    padding: 0;
     border-width: 0px;
-    padding-top: 100%;
 }
 
-.css-1kw1re2 {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    object-fit: cover;
+.gallery-image {
     width: 100%;
     height: 100%;
 }
@@ -45,6 +31,7 @@
 
 .selfie-image {
     width: 100%;
+    height: 100%;
 }
 
 .modal {
@@ -74,7 +61,12 @@
 
 .swiper-container {
     display: flex;
-    width: 100%;
+    --swiper-theme-color: #81d8d0;
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .swiper-slide {
@@ -151,15 +143,6 @@
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 3;
-}
-
-.swiper-container {
-    --swiper-theme-color: #81d8d0;
-    -ms-user-select: none;
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
 }
 
 div[class*='swiper-button-'] {
