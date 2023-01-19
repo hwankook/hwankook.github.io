@@ -1329,7 +1329,7 @@
                                     const d_day = new Date("2023-02-25 00:00:00+0900");
                                     const today = new Date();
                                     const diffs = d_day - today;
-                                    const days = Math.floor(diffs / 1000 / 60 / 60 / 24);
+                                    const days = Math.floor(diffs / 1000 / 60 / 60 / 24) + 1;
                                     document.getElementById("d-day").value = days;
                                 });
                             </script>
